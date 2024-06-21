@@ -12,6 +12,7 @@ import ProblemStatement from "../components/ProblemStatement";
 import { asyncSingleProblemGet } from "../store/ProblemSlice";
 import { RootState } from "../store/store";
 
+
 function ProblemPage() {
   const dispatch = useDispatch();
   const location = useLocation().pathname.split("/")[2];
@@ -21,6 +22,7 @@ function ProblemPage() {
 
   useEffect(() => {
     dispatch(asyncSingleProblemGet(location) as any);
+    console.log(location);
   }, []);
 
   return (

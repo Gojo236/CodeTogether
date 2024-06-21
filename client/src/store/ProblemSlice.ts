@@ -104,7 +104,7 @@ export const asyncSingleProblemGet = createAsyncThunk(
     const data = await res.json();
     if (res.ok) {
       return data;
-    } else toast.error(JSON.stringify(data));
+    } else{ toast.error(JSON.stringify(data));}
   }
 );
 

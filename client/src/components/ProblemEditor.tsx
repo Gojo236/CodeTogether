@@ -32,7 +32,6 @@ export default function ProblemEditor() {
     setJobId(JobId);
   }, [JobId]);
  
-  // Status polling
   const problemData = useGetProblemStatusQuery(
     jobId,
     !!jobId && !skip ? { pollingInterval: 1000 } : { skip: true }
@@ -40,7 +39,6 @@ export default function ProblemEditor() {
 
   useEffect(() => {
     const { data } = problemData;
-    console.log(problemData);
     if (data) {
       if (data.job.status !== "in queue") {
         setSkip(true);

@@ -17,12 +17,15 @@ export default function ProblemStatement() {
   const navigate = useNavigate();
   const dispatch = useDispatch()
 
+
   useEffect(() => {
     if (problem?.testcase) {
       const temp = problem?.testcase.filter((item) => item.sample === true);
       setSampleTestcase(temp);
     }
   }, [problem?.testcase]);
+
+  // console.log(problem)
 
   const copyUserInput = async (input: string) => {
     try {

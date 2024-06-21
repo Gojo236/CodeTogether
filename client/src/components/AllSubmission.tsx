@@ -5,7 +5,7 @@ import { RootState } from "../store/store";
 import SingleSubmissionRow from "./SingleSubmissionRow";
 
 export default function AllSubmission() {
-  const user = useSelector((state: RootState) => state.auth.user); 
+  const user = useSelector((state: RootState) => state.auth.user)
   const dispatch = useDispatch()
   const userSubmission = useSelector((state: RootState) => state.code.userSubmission)
   const problem = useSelector((state: RootState) => state.problem.singleProblem)
